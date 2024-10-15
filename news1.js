@@ -23,6 +23,9 @@ const getData = async (input) => {
     divs.innerHTML = `
       <img src="${article.urlToImage}" alt="">
       <h3>${article.title}</h3>
+      <br>
+      <h4><b>${article.author}</b></h4>
+      <h4>${article.publishedAt}</h4>
       <p>${article.description}</p>`;
 
     divs.addEventListener("click", function () {
@@ -34,6 +37,11 @@ const getData = async (input) => {
 window.addEventListener("load", function () {
   getData("india");
 });
+
+window.addEventListener("load" , function(){
+    const loader=this.document.querySelector(".loader");
+    loader.classList.add("loader-hidden");
+})
 
 searchBtn.addEventListener("click", function () {
   let inputText = inputData.value;
