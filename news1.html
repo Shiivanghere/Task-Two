@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="news1.css">
-</head>
-<body>
-    <div class="contaier">
+    <link rel="stylesheet" href="news1.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
         <nav>
-            <div class="logo">
-                <h1>Daily News</h1>
-                <!-- News Category -->
-                <li id="politics" onclick="navClick('politics')">Politics</li>
-                <li  id="sports" onclick="navClick('sports')">Sports</li>
-                <li id="technology" onclick="navClick('technology')">Technology</li>
+          <div class="logo">
+            <h1>Daily News</h1>
+            <div class="hamburger" id="hamburger">
+              <!-- Hamburger (Toggle) Icon -->
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
             </div>
-            <div class="searchBar">
-                <input type="text" placeholder="Search Here" id="inputData" value="">
-                <button id="searchBtn">Search</button>
-            </div> 
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li id="entertainment" onclick="navClick('entertainment')">Entertainment</li>
+            <li id="sports" onclick="navClick('sports')">Sports</li>
+            <li id="technology" onclick="navClick('technology')">Technology</li>
+          </ul>
+          <div class="searchBar">
+            <input type="text" placeholder="Search Here" id="inputData" value="" />
+            <button id="searchBtn">Search</button>
+          </div>
         </nav>
-    </div>
+      </div>
+    </header>
 
-    
-    <div class="cardData">
-        <img src="" alt="">
+    <main>
+      <div class="cardData">
+        <img src="" alt="" />
         <h3></h3>
         <p></p>
-    </div>
-
-
-
-    <script src="news1.js"></script>
-</body>
+      </div>
+      <script src="news1.js"></script>
+    </main>
+  </body>
 </html>
