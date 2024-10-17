@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article Details</title>
+    <link rel="stylesheet" href="news1.css" />
+    <style>
+      #goback{
+        background-color: #223133;
+        color: aliceblue;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="logo">
+            <h1>Daily News</h1>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="article-container">
+        <img id="articleImage" src="" alt="" />
+        <h1 id="articleTitle"></h1>
+        <h3 id="articleAuthor"></h3>
+        <p id="articlePublishedAt"></p>
+        <p id="articleContent"></p>
+        <a id="articleLink" href="" target="_blank">Read more at the source</a>
+      </div>
+      <button id="goback" onclick="back()">GO BACK</button>
+    </main>
+    <script>
+      const back=()=>
+    {
+      window.history.back();
+    }
+    </script>
+    <script>
+      const articleData = JSON.parse(localStorage.getItem('articleData'));
+
+      if (articleData) {
+        
+        document.getElementById('articleTitle').innerText = articleData.title;
+        document.getElementById('articleImage').src = articleData.urlToImage;
+        document.getElementById('articleAuthor').innerText = articleData.author;
+        
+        document.getElementById('articleContent').innerText = articleData.content || articleData.description;
+        document.getElementById('articlePublishedAt').innerText = new Date(articleData.publishedAt).toLocaleString();
+        document.getElementById('articleLink').href = articleData.url;
+      }
+    </script>
+  </body>
+</html>

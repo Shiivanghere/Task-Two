@@ -29,7 +29,8 @@ const getData = async (input) => {
       <p>${article.description}</p>`;
 
     divs.addEventListener("click", function () {
-      window.open(article.url);
+        localStorage.setItem('articleData',JSON.stringify(article));
+        window.location.href="article.html";
     });
   });
 };

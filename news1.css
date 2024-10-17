@@ -21,7 +21,7 @@
     justify-content: center;
     align-items: center;
     background-color: aliceblue;
-    transition: opacity 0.75s , visibility 0.75s;
+    transition: 0.75s;
   }
 
   .loader-hidden{
@@ -41,10 +41,10 @@
   
   @keyframes loading{
     from{
-        transform: rotate(0turn);
+        transform: rotate(0deg);
     }
     to{
-        transform: rotate(1turn);
+        transform: rotate(360deg);
     }
   }
   nav {
