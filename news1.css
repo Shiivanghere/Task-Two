@@ -181,4 +181,23 @@
       margin-top: 8px;
     }
   }
+
+  #pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#pagination button {
+    margin: 0 2px;
+    padding: 5px; 
+    background-color: rgb(127, 127, 197);
+    color: white;
+    border: 1px solid black; 
+    cursor: pointer; 
+    border-radius: 2.5px;
+}
+
+#pagination button:hover {
+    transform: scale(1.1); 
+}
   
